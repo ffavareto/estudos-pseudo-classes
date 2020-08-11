@@ -1,47 +1,33 @@
-q::before {
-  content: "«";
-  color: blue;
+* {
+  margin: 0;
 }
 
-q::after {
-  content: "»";
-  color: red;
+header {
+background-color: rgb(44, 44, 44);
+width: 100%;
+padding: 32px;
+box-sizing: border-box;
 }
 
-.ribbon {
-  background-color: #5BC8F7;
-}
-
-.ribbon::before {
-  content: "Olhe para esta caixa laranja.";
-  background-color: #FFBA10;
-  border-color: black;
-  border-style: dotted;
-}
-
-li {
-  list-style-type: none;
+nav a {
   position: relative;
-  margin: 2px;
-  padding: 0.5em 0.5em 0.5em 2em;
-  background: lightgrey;
-  font-family: sans-serif;
+  color: #46ffe0;
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 32px;
 }
 
-li.done {
-  background: #CCFF99;
-}
-
-li.done::after {
+nav a::after{
   content: '';
   position: absolute;
-  border-color: #009933;
-  border-style: solid;
-  border-width: 0 0.3em 0.25em 0;
-  height: 1em;
-  top: 1.3em;
-  left: 0.6em;
-  margin-top: -1em;
-  transform: rotate(45deg);
-  width: 0.5em;
+  width: 0;
+  height: 2px;
+  background-color: #46ffe0;
+  bottom: -4px;
+  left: 0;
+}
+
+nav a:hover::after {
+  width: 100%;
+  transition: width 0.5s linear;
 }
